@@ -1,0 +1,8 @@
+#IDE settings
+.idea
+
+#dependancies
+/node_modules
+
+#build
+/dist
