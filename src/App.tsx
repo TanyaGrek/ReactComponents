@@ -1,9 +1,19 @@
-import React from 'react'
+import React from 'react';
+import { Header } from 'components/Header/Header';
+import { Footer } from 'components/Footer/Footer';
+import { MovieList } from './modules/MovieList/MovieList';
+import ErrorBoundary from './utils/errorBoundary';
+
+import 'assets/styles/index.scss';
 
 export const App = () => {
   return (
-    <h1>
-      Create React App Without CRA ☘️
-    </h1>
+    <>
+      <Header />
+      <ErrorBoundary>
+        <MovieList />
+      </ErrorBoundary>
+      <Footer />
+    </>
   )
 }

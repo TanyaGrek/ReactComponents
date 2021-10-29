@@ -46,6 +46,10 @@ const config = {
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
+    modules: [
+      path.resolve(__dirname, 'node_modules'),
+      path.join(__dirname, 'src/'),
+    ],
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
