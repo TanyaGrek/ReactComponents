@@ -12,7 +12,7 @@ export const SearchForm = () => {
           <Input placeholder='What do you want to watch?'/>
         </SearchInput>
         <SearchButton>
-          <Button size='m' type='full' title='Search' onClick={() => console.log('Search clikedd')} />
+          <Button size='m' type='full' title='Search' onClick={() => console.log('Search clicked')} />
         </SearchButton>
       </Row>
     </SearchFormWrapper>

@@ -4,6 +4,6 @@ export const GENRES = {
   COMEDY: 'COMEDY',
   HORROR: 'HORROR',
   CRIME: 'CRIME'
-}
+};
 
-export const GENRES_LIST = ['ALL','DOCUMENTARY', 'COMEDY', 'HORROR','CRIME']
+export const GENRES_LIST = ['ALL','DOCUMENTARY', 'COMEDY', 'HORROR','CRIME'];

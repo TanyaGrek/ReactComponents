@@ -10,8 +10,6 @@ const __dirname = dirname(__filename);
 const isProduction = process.env.NODE_ENV === 'production';
 const stylesHandler = isProduction ? MiniCssExtractPlugin.loader : 'style-loader';
 
-console.log(path.join(__dirname, '..', 'src'))
-
 const config = {
   mode: isProduction ? 'production' : 'development',
   entry: './src/index.tsx',
@@ -50,7 +48,6 @@ const config = {
     extensions: ['.tsx', '.ts', '.js'],
     modules: [
       path.resolve(__dirname, 'node_modules'),
-      // path.resolve(__dirname, './'),
       path.join(__dirname, 'src/'),
     ],
   },

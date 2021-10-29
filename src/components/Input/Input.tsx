@@ -7,9 +7,6 @@ interface IInput {
 
 export const Input = ({ placeholder } : IInput) => {
   return (
-    <InputWrapper
-      placeholder={placeholder}
-    >
-    </InputWrapper>
+    <InputWrapper placeholder={placeholder} />
   )
 };

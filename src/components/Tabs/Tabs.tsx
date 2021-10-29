@@ -8,7 +8,7 @@ interface ITabs {
 export const Tabs = ({ tabs }: ITabs) => {
   return (
     <TabsWrapper>
-      {tabs.map(tab => <div>{tab}</div>)}
+      {tabs.map(tab => <>{tab}</>)}
     </TabsWrapper>
   )
 };
