@@ -10,6 +10,33 @@ export const MovieCardOptions = styled.div`
   background: #2A202D;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.196596);
   border-radius: 50%;
+  z-index: 5;
+`
+export const MovieCardOptionsList = styled.ul`
+  position: absolute;
+  width: 190px;
+  padding: 12px 0;
+  margin: 20px 0 0;
+  top: 10px;
+  right: 14px;
+  background: rgba(35, 35, 35, 0.918051);
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1), 0px 2px 10px rgba(0, 0, 0, 0.1), 0px 10px 20px rgba(0, 0, 0, 0.1), 0px 10px 50px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(27.1828px);
+  border-radius: 4px;
+`
+export const MovieCardOptionsListItem = styled.li`
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  color: #FFFFFF;
+  opacity: 0.8;
+  padding: 6px 23px;
+  list-style: none;
+  &:hover {
+    background-color: #F65261;
+    font-weight: 500;
+    opacity: 1;
+  }
 `
 export const MovieCardWrapper = styled.div`
   width: 322px;

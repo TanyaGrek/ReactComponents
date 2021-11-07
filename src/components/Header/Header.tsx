@@ -3,8 +3,8 @@ import logo from 'assets/images/logo.svg';
 import { Container } from 'assets/styles/Container';
 import { Row } from 'assets/styles/Row';
 import { HeaderWrapper, Logo, Title } from './Header.styles';
-import { Button } from '../Button/Button';
 import { SearchForm } from '../../modules/SearchForm/SearchForm';
+import { AddMovie } from '../../modules/AddMovie/AddMovie';
 
 export const Header = () => {
   return (
@@ -12,7 +12,7 @@ export const Header = () => {
       <Container>
         <Row justifyContent='space-between' alignItems='center'>
           <Logo><img src={logo} alt="logo" /></Logo>
-          <Button size='s' type='blurred' title='+ Add movie' onClick={() => console.log('clikedd')} />
+          <AddMovie />
         </Row>
         <Row justifyContent='center'>
           <Container>

@@ -1,7 +1,6 @@
 import React from 'react';
-import { Header } from 'components/Header/Header';
-import { Footer } from 'components/Footer/Footer';
-import { MovieList } from './modules/MovieList/MovieList';
+import { Header, Footer } from 'components';
+import { Home } from './containers/Home';
 import ErrorBoundary from './utils/errorBoundary';
 
 import 'assets/styles/index.scss';
@@ -11,7 +10,7 @@ export const App = () => {
     <>
       <Header />
       <ErrorBoundary>
-        <MovieList />
+        <Home />
       </ErrorBoundary>
       <Footer />
     </>
