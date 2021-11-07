@@ -22,8 +22,9 @@ interface IMovieCard {
     runtime: string,
     overview: string,
   },
-  edit: (id) => void
-  remove: (id) => void
+  edit: (id: number) => void
+  remove: (id: number) => void
+  changeMode: () => void
 }
 
 export const MovieCard = ({
@@ -36,12 +37,13 @@ export const MovieCard = ({
   },
   remove,
   edit,
+  changeMode,
 }: IMovieCard) => {
   const [isOpen, setIsOpen] = useState(false);
 
 
   return (
-    <MovieCardWrapper onClick={() => isOpen && setIsOpen(false)}>
+    <MovieCardWrapper onClick={() => {changeMode(); isOpen && setIsOpen(false)}}>
       <MovieCardOptions onClick={() => setIsOpen(!isOpen)} />
       {isOpen && (
         <MovieCardOptionsList>

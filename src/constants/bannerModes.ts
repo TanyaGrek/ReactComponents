@@ -1,0 +1,4 @@
+export const BANNER_MODES = {
+  SEARCH_FORM: 'SEARCH_FORM',
+  ITEM_DETAILS: 'ITEM_DETAILS',
+}

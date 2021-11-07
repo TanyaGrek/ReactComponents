@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Row } from 'assets/styles/Row';
 import { Container } from 'assets/styles/Container';
 import { IMovie } from '../../interfaces/IMovie';
@@ -11,8 +11,12 @@ import { MOVIES_MOCK } from '../../constants/mocks/movies';
 import { EditMovie } from '../EditMovie/EditMovie';
 import { RemoveMovie } from '../RemoveMovie/RemoveMovie';
 import { MovieListWrapper, MovieListCount } from './MovieList.styles';
+import { ModeContext } from '../../containers/Home';
+import { BANNER_MODES } from '../../constants/bannerModes';
 
 export const MovieList = () => {
+  const { changeMode } = useContext(ModeContext);
+
   const [selectedMovie, setSelectedMovie] = useState<IMovie | null>(null);
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   const [isRemoveModalOpen, setIsRemoveModalOpen] = useState(false);
@@ -65,6 +69,7 @@ export const MovieList = () => {
                 movie={movie}
                 remove={handleOpenConfirmModal}
                 edit={handleOpenEditModal}
+                changeMode={() => changeMode(BANNER_MODES.ITEM_DETAILS, movie)}
               />
             ))}
           </Row>
